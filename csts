@@ -1,0 +1,17 @@
+#!/bin/bash
+# csts: CST share out / in sftp handler script
+# author: Wonho Lim
+
+#   $1: i or o (share-in or share-out)
+#   $2: course number
+
+OPTION="error"
+
+case ${1} in
+    i ) OPTION="Share In"    ;;
+    o ) OPTION="Share Out"   ;;
+esac
+
+if [ "$OPTION" != "error" ]; then
+    sftp A00827033@files.bcit.ca:"$OPTION"/COMP/${2}
+fi
