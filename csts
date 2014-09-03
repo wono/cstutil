@@ -5,6 +5,7 @@
 #   $1: i or o (share-in or share-out)
 #   $2: course number
 
+STUDENT_NO="Replace this string with studnet number"
 OPTION="error"
 
 case ${1} in
@@ -13,5 +14,5 @@ case ${1} in
 esac
 
 if [ "$OPTION" != "error" ]; then
-    sftp A00827033@files.bcit.ca:"$OPTION"/COMP/${2}
+    sftp ${STUDENT_NO}@files.bcit.ca:"$OPTION"/COMP/${2}
 fi
