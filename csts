@@ -1,18 +1,21 @@
 #!/bin/bash
-# csts: CST share out / in sftp handler script
+# csts: BCIT share in/out sftp access script - default CST (COMP)
 # author: Wonho Lim
 
 #   $1: i or o (share-in or share-out)
 #   $2: course number
 
+PROGRAM_TAG="COMP"
+SERVER_ADDRESS="files.bcit.ca"
 STUDENT_NO="Replace this string with studnet number"
-OPTION="error"
+
+FLAG="error"
 
 case ${1} in
-    i ) OPTION="Share In"    ;;
-    o ) OPTION="Share Out"   ;;
+    i ) FLAG="Share In"    ;;
+    o ) FLAG="Share Out"   ;;
 esac
 
 if [ "$OPTION" != "error" ]; then
-    sftp ${STUDENT_NO}@files.bcit.ca:"$OPTION"/COMP/${2}
+    sftp ${STUDENT_NO}@${SERVER_ADDRESS}:"$FLAG"/${PROGRAM_TAG}/${2}
 fi
