@@ -7,7 +7,7 @@
 
 PROGRAM_TAG="COMP"
 SERVER_ADDRESS="files.bcit.ca"
-STUDENT_NO="Replace this string with studnet number"
+STUDENT_NO="Replace this string with studnet number. e.g) A00123456"
 
 FLAG="error"
 
