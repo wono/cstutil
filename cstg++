@@ -1,8 +1,9 @@
 #!/bin/bash
-# cstg++: g++ compiling with option tags for c++ course
+# cstg++: g++ compile with option tags for c++ course, then run
 # author: Wonho Lim
 
 #   ARG1: Output file name
 #   ARG2: Source file name
 
-g++ -pedantic -Wall -Wextra -W -g -Ox -std=c++0x -o $1 $2
+g++ -pedantic -Wall -Wextra -W -g -std=c++0x -o $1 $2 &&\
+./$1
