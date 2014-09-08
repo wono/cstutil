@@ -8,7 +8,7 @@
 
 PROGRAM_TAG="COMP"
 SERVER_ADDRESS="files.bcit.ca"
-STUDENT_NO="A00827033"
+STUDENT_NO="A0000000" #replace this with a student number
 
 FLAG="error"
 
