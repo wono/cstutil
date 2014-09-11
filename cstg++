@@ -5,5 +5,4 @@
 #   ARG1: Output file name
 #   ARG2: Source file name
 
-g++ -pedantic -Wall -Wextra -W -g -std=c++0x -o $1 $2 &&\
-./$1
+clear && g++ -pedantic -Wall -Wextra -W -g -std=c++0x -o $1 $2 && ./$1
