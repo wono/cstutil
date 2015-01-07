@@ -1,8 +1,23 @@
 #!/bin/bash
-# cstg++: g++ compile with option tags for c++ course, then run
-# author: Wonho Lim
+#author: Wonho Lim
 
-#   ARG1: Output file name
-#   ARG2: Source file name
+OPTFLAG="-pedantic -Wall -Wextra -W -g -std=c++0x"
+OUTP="lab10"
+SRC1="Polar.cpp"
+SRC2="Rect.cpp"
+SRC3=""
+SRC4=""
+SRC5=""
 
-clear && g++ -pedantic -Wall -Wextra -W -g -std=c++0x -o $1 $2 && ./$1
+MAIN="Demo.cpp"
+echo
+echo ========================================================================
+echo ========================================================================
+echo ==================== CST COMP 3512 Lab Assignment 9 ====================
+echo ========================================================================
+echo =========================== Author: Wonho Lim ==========================
+echo ========================================================================
+echo ========================================================================
+echo
+
+g++ $OPTFLAG -o $OUTP $MAIN $SRC1 $SRC2 $SRC3 $SRC4 $SRC5 && ./$OUTP
